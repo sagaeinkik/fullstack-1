@@ -1,0 +1,25 @@
+@use 'vars' as v;
+
+/* DARKMODE BAKGRUND */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: v.$verydarkgreen;
+    }
+    .wrapper {
+        background: url(../img/web.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* LIGHTMODE BAKGRUND */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: v.$lightblue;
+    }
+    .wrapper {
+        background: url(../img/feather.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

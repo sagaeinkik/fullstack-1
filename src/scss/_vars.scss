@@ -1,0 +1,36 @@
+/* VARIABLER OCH DYLIKT */
+
+//Typsnitt
+$breadfont: Montserrat, arial, Helvetica, sans-serif;
+$headingfont: 'Funnel Display', arial, helvetica, sans-serif;
+
+//Färger
+$verydarkgreen: #010e05;
+$lightblue: #7394b3;
+
+//Mixins
+//Centrering
+@mixin center($horizontal, $vertical) {
+    @if $horizontal and $vertical {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $vertical {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    } @else if $horizontal {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+//Transition
+@mixin transition {
+    transition: 0.5s ease;
+    //Tror parcel lägger till dessa själv men better safe than sorry
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}

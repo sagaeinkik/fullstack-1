@@ -1,0 +1,46 @@
+/* NOLLSTÄLLNINGAR, GRUNDLÄGGANDE REGLER  */
+@use 'vars' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Inget overflow
+.wrapper {
+    overflow-x: hidden;
+}
+
+//Body-bredd
+body {
+    @extend .wrapper;
+    max-width: 3000px;
+    width: 100%;
+    margin: auto;
+    line-height: 1.5;
+    font-family: v.$breadfont;
+}
+
+//Ta bort understrykning på länkar
+a {
+    text-decoration: none;
+}
+
+//List items på ul
+ul li {
+    list-style: none;
+}
+
+//max-bredd på text
+p {
+    max-width: 35em;
+    margin-bottom: 1.7em;
+}
+
+//Rubriker
+h1,
+h2,
+h3 {
+    font-family: v.$headingfont;
+}
