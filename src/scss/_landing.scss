@@ -23,7 +23,7 @@
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.17);
     background-color: rgba(255, 255, 255, 0.1);
     //Blurra
-    backdrop-filter: blur(17px);
+    backdrop-filter: blur(18px);
 
     //textfärg
     color: white;
@@ -37,17 +37,40 @@ nav {
     ul {
         display: flex;
         justify-content: space-evenly;
+        margin-top: 0.5em;
     }
-    li {
-        padding: 0.7em;
 
-        a {
-            color: white;
-            @include v.transition;
+    a {
+        padding: 0 0.1em 0.3em;
+        border-radius: 10px;
+        color: white;
+        position: relative; //För streck efter
 
-            &:hover {
-                color: black;
-            }
+        //Streck efter
+        &:after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include v.transition; //Transition
+        }
+        //Bredda så strecket blir synligt
+        &:hover:after {
+            width: 100%;
+        }
+        //Nuvarande sida
+        &[aria-current='page']:after {
+            //Här måste jag tyvärr upprepa mig för man får inte använda extend tillsammans med compound selectors
+            content: '';
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
         }
     }
 }
@@ -66,11 +89,11 @@ h1 {
     justify-self: center;
     padding: 1.2em;
     height: 100%;
-    margin-top: 5vh;
+    margin-top: 1em;
 
     .grid-box {
-        /* border: 1px solid black; */
-        margin: 1em 0;
+        margin: 1em;
+        padding-right: 0.5em;
 
         &:first-child {
             border-right: 1px solid white;

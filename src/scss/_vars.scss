@@ -29,8 +29,8 @@ $lightblue: #7394b3;
 
 //Transition
 @mixin transition {
-    transition: 0.5s ease;
+    transition: 0.7s ease;
     //Tror parcel lägger till dessa själv men better safe than sorry
-    -webkit-transition: 0.5s ease;
-    -moz-transition: 0.5s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
 }

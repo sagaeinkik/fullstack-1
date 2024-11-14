@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 | Bootstrap </title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark text-light">
+    <header>
+        <!-- Navigering -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Start</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="bootstrap.html">Bootstrap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tailwind</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Publicering</a>
+                        </li>
+                    </ul>
+                </div> <!-- Slut på navbar collapse -->
+            </div> <!-- Slut på container fluid -->
+        </nav>
+        <!-- Herobild -->
+        <picture>
+            <!-- Mörk liten version -->
+            <source media="(max-width: 899px)" srcset="img/header.png?as=avif&width=900" type="image/avif">
+            <source media="(max-width: 899px)" srcset="img/header.png?as=webp&width=900" type="image/webp">
+            <source media="(max-width: 899px)" srcset="img/header.png?as=png&width=900" type="image/png">
+            <!-- Mörk stor version -->
+            <source media="(min-width: 900px)" srcset="img/header.png?as=avif&width=2000" type="image/avif">
+            <source media="(min-width: 900px)" srcset="img/header.png?as=webp&width=2000" type="image/webp">
+            <source media="(min-width: 900px)" srcset="img/header.png?as=png&width=2000" type="image/png">
+            <img src="img/header.png" alt="Berg i solnedgång" class="img-fluid">
+        </picture>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="mt-4">Bootstrap</h1>
+            <p>Bootstrap är ett av de mest populära CSS-ramverken att och går att inkludera antingen via nedladdning (t
+                ex genom npm) eller via CDN.</p>
+            <p>Det baseras på både Sass som CSS och på JavaScript för att kunna dölja/visa element, till exempel för
+                mobilnavigering.</p>
+            <p>Det består dels av klasser som kan sättas på vilka element som helst, och av färdiga komponenter såsom
+                navbars.</p>
+            <p>Bootstrap har utförlig dokumentation på <a href="https://getbootstrap.com/" target="_blank">Bootstraps
+                    hemsida</a>.</p>
+            <h2 class="mt-2">Fördelar</h2>
+            <ul>
+                <li>Man får responsiviteten på köpet när man använder Bootstraps container-klass, och likaså kan man få
+                    en
+                    responsiv mobilmeny som är redo att använda. All JavaScript finns redan på plats om man inkluderar
+                    en
+                    CDN-länk i en script-tagg.</li>
+                <li>Tabeller och formulär är lättare att lägga till eftersom även de är enkla att få responsiva och lite
+                    lättare att styla.</li>
+                <li>Det sägs att det sparar tid och det är ju smidigt i teorin att kunna smälla på lite klasser på
+                    taggarna
+                    bara.</li>
+                <li>Bra och utförlig dokumentation med flera exempel på anpassningar och olika användningar. Finns också
+                    ett cheatsheet som kommer väl till pass när man ska lära sig lite snabbt.</li>
+                <li>Vissa komponenter är faktiskt skönt att slippa skapa själv, till exempel accordions och progress
+                    bars.</li>
+            </ul>
+            <h2>Nackdelar</h2>
+            <ul>
+                <li>Man kan säkert anpassa Bootstrap mycket mer än vad man tror, men det känns inte enkelt. Jag tycker
+                    inte om begränsningen i valfrihet.</li>
+                <li>Jag har lagt långt mycket mer tid på att försöka läsa på hur man kan positionera saker än det hade
+                    tagit
+                    mig att bara styla sakerna helt själv med en egen css-fil.</li>
+                <li>Jag har aldrig upplevt formulär och knappar som särskilt jobbiga att ha att göra med, så det
+                    tilltalar inte
+                    mig
+                    särskilt mycket som säljpunkt att det skulle bli "jättemycket smidigare". Tabellen var dock skön att
+                    slippa.</li>
+                <li>Färgerna är svåra att påverka med CDN-inkluderad Bootstrap och man har otroligt begränsade val.</li>
+                <li>Det känns som att om man vill få det faktiskt snyggt och anpassat så kommer man behöva lägga en del
+                    tid och energi på det. Då känns det kanske nästan smidigare att bara skriva sin egen CSS på en gång?
+                </li>
+            </ul>
+            <p>Jag är kanske lite orättvis mot Bootstrap här. Jag är säker på att det finns många fördelar fler än jag
+                har listat, och nackdelarna stämmer säkert in på många fler ramverk också.</p>
+            <p>Jag misstänker också att man kan påverka mer om man inte kör via CDN.</p>
+            <!-- TABELL -->
+            <h2 class="mt-4">Tabell</h2>
+            <div class="table-responsive">
+
+                <table class="table table-dark table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <td scrope="col">Hundnamn</td>
+                            <td scrope="col">Promenadstråk</td>
+                            <td scrope="col">Jagad av kanadagäss</td>
+                            <td scrope="col">Antal pinnpauser</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row">
+                            <td>Loka</td>
+                            <td>Nere vid badhusparken</td>
+                            <td class="text-success">&#x2713;</td>
+                            <td>3</td>
+                        </tr>
+                        <tr scope="row">
+                            <td>Balto</td>
+                            <td>Strandpromenaden</td>
+                            <td class="text-danger">&#10008;</td>
+                            <td>1</td>
+                        </tr>
+                        <tr scope="row">
+                            <td>Freya</td>
+                            <td>Björnens triangel</td>
+                            <td class="text-danger">&#10008;</td>
+                            <td>0</td>
+                        </tr>
+                        <tr scope="row">
+                            <td>Lukas</td>
+                            <td>Odenslundsparken</td>
+                            <td class="text-success">&#x2713;</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- FORMULÄR -->
+            <h2 class="mt-4">Formulär</h2>
+            <form class="mb-4">
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="dogname">Hundnamn:</label>
+                        <input type="text" class="form-control" id="dogname" required>
+                    </div> <!-- Slut på grupp -->
+
+                    <div class="form-group col">
+                        <label for="pinnpaus">Antal pinnpauser:</label>
+                        <select name="pinnpaus" id="pinnpaus" class="form-control" required>
+                            <option value="" disabled selected>Välj i listan</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div> <!-- Slut på grupp -->
+                </div> <!-- Slut på row -->
+                <div class="row mt-4">
+
+                    <div class="form-group col">
+                        <label for="promenad">Promenadstråk:</label>
+                        <textarea name="promenad" id="promenad" class="form-control" placeholder="t.ex mount everest"
+                            required></textarea>
+                    </div> <!-- Slut på grupp -->
+                </div> <!-- Slut på row -->
+                <div class="row mt-4">
+                    <div class="form-group">
+                        <label for="jagad">Jagade av kanadagäss:</label>
+                        <input type="checkbox" name="jagad" id="jagad" required>
+                    </div><!-- Slut på grupp -->
+                </div> <!-- Slut på row-->
+                <button class="btn btn-success mt-4">Skicka in</button>
+            </form>
+        </div> <!-- Slut på container -->
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
