@@ -29,7 +29,7 @@
                             <a class="nav-link active" aria-current="page" href="bootstrap.html">Bootstrap</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tailwind</a>
+                            <a class="nav-link" href="tailwind.html">Tailwind</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Publicering</a>
@@ -48,7 +48,8 @@
             <source media="(min-width: 900px)" srcset="img/header.png?as=avif&width=2000" type="image/avif">
             <source media="(min-width: 900px)" srcset="img/header.png?as=webp&width=2000" type="image/webp">
             <source media="(min-width: 900px)" srcset="img/header.png?as=png&width=2000" type="image/png">
-            <img src="img/header.png" alt="Berg i solnedgång" class="img-fluid">
+            <img src="img/header.png" alt="Berg i solnedgång" class="img-fluid"
+                style="width: 100%; max-width: 2800px; margin: auto">
         </picture>
     </header>
     <main>
@@ -58,9 +59,11 @@
                 ex genom npm) eller via CDN.</p>
             <p>Det baseras på både Sass som CSS och på JavaScript för att kunna dölja/visa element, till exempel för
                 mobilnavigering.</p>
-            <p>Det består dels av klasser som kan sättas på vilka element som helst, och av färdiga komponenter såsom
-                navbars.</p>
-            <p>Bootstrap har utförlig dokumentation på <a href="https://getbootstrap.com/" target="_blank">Bootstraps
+            <p>Det består dels av klasser som kan sättas på vilka element som helst, men har också många färdiga
+                komponenter såsom
+                navbars, footers, accordions och så vidare.</p>
+            <p>Bootstrap har utförlig dokumentation på <a href="https://getbootstrap.com/" target="_blank"
+                    class="text-decoration-none text-success">Bootstraps
                     hemsida</a>.</p>
             <h2 class="mt-2">Fördelar</h2>
             <ul>
@@ -106,10 +109,10 @@
                 <table class="table table-dark table-striped">
                     <thead class="thead-light">
                         <tr>
-                            <td scrope="col">Hundnamn</td>
-                            <td scrope="col">Promenadstråk</td>
-                            <td scrope="col">Jagad av kanadagäss</td>
-                            <td scrope="col">Antal pinnpauser</td>
+                            <th scrope="col">Hundnamn</th>
+                            <th scrope="col">Promenadstråk</th>
+                            <th scrope="col">Jagad av kanadagäss</th>
+                            <th scrope="col">Antal pinnpauser</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -137,6 +140,12 @@
                             <td class="text-success">&#x2713;</td>
                             <td>1</td>
                         </tr>
+                        <tr scope="row">
+                            <td>Isla</td>
+                            <td>Almedalen</td>
+                            <td class="text-success">&#x2713;</td>
+                            <td>6+</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -159,6 +168,7 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
+                            <option value="6+">6+</option>
                         </select>
                     </div> <!-- Slut på grupp -->
                 </div> <!-- Slut på row -->

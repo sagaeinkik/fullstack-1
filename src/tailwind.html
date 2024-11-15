@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 | Tailwind</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind konfigurering -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    boxShadow: {
+                        'xs': '0 1px 2px 0 rgba(0, 0, 0, 0.2)'
+                    },
+                    borderRadius: {
+                        'giant': '5em'
+                    },
+                    padding: {
+                        'litetill': '11px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-slate-800">
+    <header>
+        <!-- NAVIGERING -->
+        <nav
+            class="bg-gradient-to-r from-sky-300 via-amber-200 to-pink-400 rounded-b-xl p-2 shadow-xs dark:shadow-none">
+            <ul class="flex flex-row flex-wrap justify-evenly sm:py-2 sm:text-md md:flex-nowrap font-mono">
+                <li><a href="index.html"
+                        class="transition-colors duration-500 hover:bg-black hover:text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md">Start</a>
+                </li>
+                <li><a href="bootstrap.html"
+                        class="transition-colors duration-500 hover:bg-black hover:text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md">Bootstrap</a>
+                </li>
+                <li><a href="tailwind.html"
+                        class="bg-black text-white transition-colors duration-500 hover:text-pink-300 px-2 py-1 sm:px-4 sm:py-2 rounded-md">Tailwind</a>
+                </li>
+                <li><a href="#"
+                        class="transition-colors duration-500 hover:bg-black hover:text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md">Publicering</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INNEHÅLL -->
+    <div class="md:container md:mx-auto py-2 px-4 dark:text-slate-50"> <!-- Container -->
+
+        <div class="text-content max-w-6xl mx-auto leading-relaxed">
+            <h1 class="text-4xl md:text-6xl mt-10 font-serif">Tailwind CSS</h1>
+
+            <p class="mt-2">Tailwind CSS är ett till ramverk som ämnar att underlätta design av webbplatser och
+                -applikationer. </p>
+            <p class="mt-2">Det består främst av utility-klasser som man kan sätta på vilka html-taggar som helst i
+                stort sett, till
+                exempel för margin, padding, bakgrundsfärger och dylikt.</p>
+            <p class="mt-2">Tailwind har vissa färdiga komponenter för till exempel headers, footers, cards och
+                liknande; de flesta
+                av
+                dessa kommer man åt genom att betala. Enstaka finns tillgängliga gratis men kan kräva kompletterande
+                JS-kod.
+            </p>
+            <p class="mt-2">Det finns mängder av läsning på <a href="https://tailwindcss.com/" target="_blank"
+                    class="underline decoration-dotted transition-colors duration-500 hover:bg-gradient-to-r hover:from-sky-300 hover:via-amber-200 hover:to-pink-400 hover:bg-clip-text hover:text-transparent">Tailwinds
+                    hemsida</a>.</p>
+            <h2 class="mt-4 font-serif text-2xl md:4xl">Fördelar:</h2>
+            <ul class="list-disc">
+                <li class="ml-4">Bra, omfattande dokumentation med många kodexempel som ändå är lättbegripliga.</li>
+                <li class="ml-4">Enkelt och intuitivt att använda utility-klasserna; det krävs inte att
+                    föräldraelementet har en viss
+                    klass för att något ska slå igenom.</li>
+                <li class="ml-4">Även när man använder CDN är det enkelt att konfigurera inställningar efter eget huvud,
+                    något de
+                    visar
+                    genomgående i dokumentationen.</li>
+                <li class="ml-4">Otroligt enkelt att lägga till stilregler för dark mode rakt i taggarna.</li>
+                <li class="ml-4">Har färdiga komponenter om man så vill.</li>
+                <li class="ml-4">Enkelt att använda brytpunkter för att styra t ex textstorlekar och hur padding ska
+                    ändras vid olika skärmstorlekar.</li>
+                <li class="ml-4">Stort urval av inkluderade färger (och går som sagt mycket enkelt att lägga till egna
+                    färger och
+                    regler om man saknar något).</li>
+                <li class="ml-4">Har stöd för pseudoselektorer som :first-child, :hover osv.</li>
+            </ul>
+            <h2 class="mt-4 font-serif text-2xl md:4xl">Nackdelar:</h2>
+            <ul class="list-disc">
+                <li class="ml-4">Deras rebase/nollställning av stilregler är lite för omfattande i min smak:
+                    <ul class="list-disc">
+                        <li class="ml-6">Det tar bort storleksskillnader på text och rubriker</li>
+                        <li class="ml-6">Det tar bort listpunkter helt, man får lägga till manuellt</li>
+                        <li class="ml-6">Det plattar ut nested lists</li>
+                    </ul>
+
+                </li>
+                <li class="ml-4">Om man vill att till exempel alla a-element inuti en nav ska ha samma stilregler som
+                    margin,
+                    padding, hover-effekter osv, så måste man lägga till det på varje individuell a-tagg. Det är
+                    lite störigt.</li>
+                <li class="ml-4">Många av komponenterna ligger bakom en betalvägg.</li>
+                <li class="ml-4">En del av responsiviteten får man lägga till själv, även om den är enkel att lägga
+                    till.</li>
+                <li class="ml-4">Det blir helt sjukt plottrigt i html-filen.</li>
+            </ul>
+            <p class="mt-4">Tailwind och dess utility-klasser har fungerat mycket mer så som jag önskade att Bootstrap
+                fungerade, och har därför varit mycket trevligare att jobba med i min mening.</p>
+            <p class="mt-2">Jag känner att jag får påverka och styra mycket själv, men utan att skriva någon egen css,
+                vilket faktiskt är smidigt i det här utförandet.</p>
+            <p class="mt-2">Jag föredrar fortfarande att skriva min egen CSS om jag får välja helt själv, men Tailwind
+                är ett ramverk jag faktiskt ser mig själv använda i framtiden ifall jag inte skulle orda styla själv.
+            </p>
+            <!-- TABELL -->
+            <h2 class="mt-6 font-serif text-2xl md:4xl">En tabell om ostar</h2>
+            <div class="relative flex flex-col w-full h-full overflow-scroll rounded-xl">
+                <table class="w-full text-left table-auto w-100">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2 border-b border-slate-500">
+                                Ostnamn
+                            </th>
+                            <th class="px-4 py-2 border-b border-slate-500">
+                                Sort
+                            </th>
+                            <th class="px-4 py-2 border-b border-slate-500">
+                                Karaktär
+                            </th>
+                            <th class="px-4 py-2 border-b border-slate-500">
+                                Pretentiös?
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-4 py-2">
+                                Whiskeycheddar
+                            </td>
+                            <td class="px-4 py-2">
+                                Hårdost
+                            </td>
+                            <td class="px-4 py-2">
+                                Stark, smakrik ost med sting i och rund karaktär.
+                            </td>
+                            <td class="px-4 py-2 text-lime-500 font-bold text-xl">
+                                &#x2713;
+                            </td>
+                        </tr>
+                        <tr class="bg-amber-100 dark:bg-slate-700">
+                            <td class="px-4 py-2">
+                                Manchego
+                            </td>
+                            <td class="px-4 py-2">
+                                Kittost
+                            </td>
+                            <td class="px-4 py-2">
+                                Mild, smörig, salt och pikant nötig ost med anor från bronsåldern som lagras upp till
+                                två år.
+                            </td>
+                            <td class="px-4 py-2 text-lime-500 font-bold text-xl">
+                                &#x2713;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">
+                                Hushållsost
+                            </td>
+                            <td class="px-4 py-2">
+                                Hårdost
+                            </td>
+                            <td class="px-4 py-2">
+                                Mild, gräddig och syrlig, fast smakar inte särskilt mycket alls.
+                            </td>
+                            <td class="px-4 py-2 text-xl text-rose-700 font-bold">
+                                &#10008;
+                            </td>
+                        </tr>
+
+                        <tr class="bg-amber-100 dark:bg-slate-700">
+                            <td class="px-4 py-2">
+                                Brie de Meaux
+                            </td>
+                            <td class="px-4 py-2">
+                                Vitmögelost
+                            </td>
+                            <td class="px-4 py-2">
+                                Gräddig och krämig med fyllig, lite mustig smak och ladugårdslik doft.
+                            </td>
+                            <td class="px-4 py-2 text-xl text-rose-700 font-bold">
+                                &#10008;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">
+                                Stilton
+                            </td>
+                            <td class="px-4 py-2">
+                                Blåmögelost
+                            </td>
+                            <td class="px-4 py-2">
+                                En intensiv, fylling och komplex len smak med sälta, nötiga toner och knäckighet. Mjuk
+                                och krämig med lite smulig konsistens.
+                            </td>
+                            <td class="px-4 py-2 text-lime-500 font-bold text-xl">
+                                &#x2713;
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FORMULÄR -->
+
+            <h2 class="mt-8 font-serif text-2xl md:4xl">Ett formulär för ostar</h2>
+            <form class="mt-2">
+                <div class="grid sm:grid-cols-2 gap-2 mb-6">
+                    <div class="mt-4 w-full"> <!-- Input-grupp ostnamn-->
+                        <label for="name" class="block mb-2 font-bold">Ostnamn:</label>
+                        <input type="text" name="name" id="name" required
+                            class="rounded-xl w-full py-2 px-3 text-black shadow-xs bg-gradient-to-r from-sky-200 to-pink-200 focus:outline-none dark:shadow-none">
+                    </div> <!-- Slut på ostnamn -->
+
+                    <div class="mt-4 w-full"> <!-- Input-grupp Sort-->
+                        <label for="sort" class="block mb-2 font-bold">Sort:</label>
+                        <select name="sort" id="sort" required
+                            class="w-full rounded-xl py-litetill px-3 text-black shadow-xs bg-gradient-to-r from-sky-200 to-pink-200 dark:shadow-none">
+                            <option value="" disabled selected>Välj ett alternativ i listan</option>
+                            <option value="farskost">Färskost</option>
+                            <option value="hardost">Hårdost</option>
+                            <option value="getost">Getost</option>
+                            <option value="blamogel">Blåmögelost</option>
+                            <option value="vitmogel">Vitmögelost</option>
+                            <option value="kittost">Kittost</option>
+                            <option value="grillost">Grillost</option>
+                            <option value="vitost">Vitost</option>
+                        </select>
+                    </div> <!-- Slut på ostnamn -->
+                </div> <!-- Slut på lilla grid-container -->
+                <div class="mt-4 w-full mb-6"> <!-- Grupp för karaktär -->
+                    <label for="character" class="font-bold">Karaktär:</label>
+                    <textarea name="character" id="character" required
+                        class="mt-2 w-full rounded-xl px-3 py-2 text-black shadow-xs bg-gradient-to-r from-sky-200 to-pink-200 focus:outline-none dark:shadow-none"></textarea>
+                </div>
+                <div class="mt-4 w-full mb-6"> <!-- Grupp för checkruta -->
+                    <label for="pretentious" class="mb-2 font-bold">Det här är en pretentiös ost:</label>
+                    <input type="checkbox" name="pretentious" id="pretentious" class="accent-pink-300 h-4 w-4 ml-2">
+                </div>
+                <input type="submit" value="Skicka in!"
+                    class="bg-sky-200 text-black p-4 rounded-2xl transition duration-500 cursor-pointer hover:bg-pink-200 hover:text-black">
+            </form>
+        </div> <!-- Slut på text-content -->
+        <img src="img/hors.jpg" alt="Gray horse standing in a field of very tall grass."
+            class="rounded-giant md:w-9/12 mx-auto my-4">
+
+    </div> <!-- Slut på container -->
+</body>
+
+</html>
