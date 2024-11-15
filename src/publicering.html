@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 | CSS-ramverk</title>
+    <!-- SCSS -->
+    <link rel="stylesheet" href="scss/main.scss">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap&family=Funnel+Display:wght@300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- MAIN -->
+        <main>
+            <div class="content">
+                <!-- Navigering -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Start</a></li>
+                        <li><a href="bootstrap.html">Bootstrap</a></li>
+                        <li><a href="tailwind.html">Tailwind</a></li>
+                        <li><a href="publicering.html" aria-current="page">Publicering</a></li>
+                    </ul>
+                </nav>
+                <h1>Publicering</h1>
+                <div class="text">
+                    <p>Jag spenderade äckligt lång tid med att försöka skapa Workflows, yml-filer,
+                        Secret tokens och så vidare för att publicera till Github Pages för första gången med Parcel.
+                    </p>
+                    <p>Det var det absolut krångligaste och mest frustrerande jag tagit mig an sedan jag försökte få
+                        skrivrättigheter för apaches htdocs på en Mac. Så jag gav upp och valde Vercel, som jag bara har
+                        testat en gång innan och en gång är ju ingen gång.</p>
+                </div> <!-- Slut på div.text -->
+                <div class="grid-container">
+                    <div class="grid-box">
+
+                        <h2>Om Vercel</h2>
+                        <p>
+                            <a href="https://vercel.com/about" target="_blank" class="normal-link">Vercel</a> är en
+                            publiceringsplattform
+                            för statiska webbplatser och applikationer.
+                        </p>
+                        <h3>Språksstöd</h3>
+                        <p>Vercel har stöd för flera språk som bland annat JavaScript, PHP, Python, Rust och Ruby, där
+                            vissa behöver vara serverless för att fungera.</p>
+                        <p>Vidare finns det också stöd för ramverk som Next.JS (deras egna skapelse), Ract, Vue, Svelte,
+                            Angular med flera.</p>
+                        <p>Vercel kan också hantera runtimes som node.js och edge.</p>
+                        <h3>Kostnader</h3>
+                        <p>Vercel erbjuder tre betalalternativ: Hobby, Pro och Enterprise.</p>
+                        <p>Hobby är helt gratis med obegränsade webbplatser. Med Pro får man bland annat stöd för
+                            team-kollaborationer, utökad säkerhet och bättre support, för 20 USD i månaden. Enterprise
+                            är ännu mer avancerat. </p>
+                        <h3>Fördelar</h3>
+                        <p>Det är extremt enkelt att publicera en hemsida, helt utan konfiguration. Det är så enkelt som
+                            att trycka på en knapp, vänta några sekunder och sen besöka sin webbplats.</p>
+                        <p>Vercel har stöd för CI/CD automatiskt, så för varje push man gör med Git uppdateras
+                            webbplatsen.</p>
+                        <p>Det är gratis att använda och har inga irriterande begränsningar även på hobbynivå.</p>
+                        <p>Vercel känner av vad man har använt för package manager och tillägg, så att man inte behöver
+                            krångla.</p>
+                        <p>Publicering sker på bara några sekunder.</p>
+                        <h3>Nackdelar</h3>
+                        <p>Jag tycker ärligt talat att den enda nackdelen är att Vercel bara är till statiska/serverlösa
+                            webbplatser och applikationer.</p>
+                        <p>Tönk vilken lycka om man kunde lägga upp sitt API eller liknande på Vercel också.</p>
+                        <p>Förutom det är jag helt nöjd med Vercel, som gör exakt vad jag vill att en molnplattform ska
+                            göra.</p>
+                    </div> <!-- Slut på grid-box 1-->
+                    <div class="grid-box">
+                        <h2>Tillvägagångssätt</h2>
+                        <p class="no-top-margin">
+                            Helst bör man, som jag, spendera minst fyra timmar med att försöka deploya till något
+                            krångligare (typ ghpages) så att man verkligen kan uppskatta hur fenomenalt smidigt det är
+                            att använda Vercel istället.
+                        </p>
+                        <p>Vercel går enkelt att koppla ihop med ett GitHub-konto och känner därefter automatiskt av
+                            vilka repositories som finns att välja på.</p>
+                        <p>Därmed är det löjligt enkelt att skapa ett nytt projekt i Vercel och välja vilket repo som
+                            huserar projektets filer.</p>
+                        <p>Vercel känner automatiskt av vilka package managers som kan ha använts, och eventuella
+                            bundlers, och föreslår därefter bygg-kommandon (till exempel npm run build).</p>
+                        <p>Det är inget som helst krångel med att ha använt parcel; Vercel känner till och med av att
+                            Parcel har använts, och visar det som ikon på översikten över publicerade sidor.</p>
+                        <p>Vercel har stöd för CI/CD så för varje push man gör till sitt online-repo uppdateras den
+                            publicerade sidan.</p>
+                    </div> <!-- Slut på grid-box 2 -->
+                </div> <!-- Slut på grid-container -->
+            </div> <!-- Slut på div.content -->
+        </main>
+    </div> <!-- Slut på div.wrapper -->
+</body>
+
+</html>

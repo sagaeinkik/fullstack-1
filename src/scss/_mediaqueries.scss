@@ -2,68 +2,73 @@
 
 /* DARKMODE BAKGRUND */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: v.$verydarkgreen;
-    }
-    .wrapper {
-        background: url(../img/web.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+  body {
+    background-color: v.$verydarkgreen;
+  }
+  .wrapper {
+    background: url(../img/web.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* LIGHTMODE BAKGRUND */
 @media (prefers-color-scheme: light) {
-    body {
-        background-color: v.$lightblue;
-    }
-    .wrapper {
-        background: url(../img/feather.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+  body {
+    background-color: v.$lightblue;
+  }
+  .wrapper {
+    background: url(../img/feather.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (max-width: 760px) {
-    //Bredda content
-    .content {
-        width: 80%;
-    }
-    //Gör om menyn så den kan wrappa
-    nav ul {
-        flex-wrap: wrap;
+  //Bredda content
+  .content {
+    width: 80%;
+  }
+  //Gör om menyn så den kan wrappa
+  nav ul {
+    flex-wrap: wrap;
 
-        li {
-            padding: 0.3em;
-        }
+    li {
+      padding: 0.3em;
+    }
+  }
+
+  //Gör om texten från grid till kolumn
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em;
+
+    .grid-box {
+      margin: 0;
     }
 
-    //Gör om texten från grid till kolumn
-    .grid-container {
-        display: flex;
-        flex-direction: column;
-
-        //Ta bort border: right
-        .grid-box:first-child {
-            border: none;
-        }
+    //Ta bort border: right
+    .grid-box:first-child {
+      border: none;
     }
+  }
 }
 
 @media (max-width: 350px) {
-    .content {
-        width: 95%;
-        min-height: 90vh;
-        padding: 0;
-    }
+  .content {
+    width: 95%;
+    min-height: 90vh;
+    padding: 0;
+  }
 
-    //Flytta upp h1 lite
-    h1 {
-        margin-top: 1em;
-    }
+  //Flytta upp h1 lite
+  h1 {
+    margin-top: 1em;
+  }
 
-    //Ta bort padding grid
-    .grid-container {
-        padding: 0;
-    }
+  //Ta bort padding grid
+  .grid-container {
+    padding: 0;
+  }
 }
